@@ -5,12 +5,18 @@
     <meta charset="utf-8" />
     <title>js</title>
     <script>
-        var x = prompt("Input x value ", "0");
-        var y = prompt("Input y value ", "0.0");
-        var integerX = parseInt(x);
-        var floatY = parseFloat(y);
-        var result = integerX + floatY;
-        document.write(result);
+        var a = true;
+        var b = false;
+        var c = true;
+        var  res;
+        res = a && b;
+        document.write(res + "<br/>");
+        res = a || b;
+        document.write(res + "<br/>");
+        res = a && c;
+        document.write(res + "<br/>");
+        res = a || c;
+        document.write(res + "<br/>");
     </script>
 </head>
 <body>
