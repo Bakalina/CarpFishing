@@ -5,16 +5,24 @@
     <meta charset="utf-8" />
     <title>js</title>
     <script>
-        var a = 5, b = 4, result;
+        var counter = prompt("Введите число");
+        var factorial = 1;
 
-        /*if (a + b < 10) {
-            result = "Sun";
-        } else {
-            result = "Luna";
-        }*/
+        document.write("Факториал числа: " + counter + "! = ");
 
-        result = a + b < 10 ? "Sun" : "Luna";
-        document.write(result);
+        do {
+
+            if (counter == 0) {
+                factorial = 1;
+                break;
+            }
+
+            factorial = factorial * counter;
+            counter = counter - 1;
+        }
+        while (counter > 0);
+
+        document.write(factorial);
     </script>
 </head>
 <body>
