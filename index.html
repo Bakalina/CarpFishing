@@ -5,24 +5,18 @@
     <meta charset="utf-8" />
     <title>js</title>
     <script>
-        var counter = prompt("Введите число");
-        var factorial = 1;
-
-        document.write("Факториал числа: " + counter + "! = ");
-
-        do {
-
-            if (counter == 0) {
-                factorial = 1;
-                break;
+        var count = 5;
+        var exit = 3;
+        for (var i = 1; i <= count; i++) {
+            if (i == exit) {
+                document.write("hello<br />");
+                continue;
             }
-
-            factorial = factorial * counter;
-            counter = counter - 1;
+            else {
+                document.write(i + "<br />");
+            }
         }
-        while (counter > 0);
 
-        document.write(factorial);
     </script>
 </head>
 <body>
