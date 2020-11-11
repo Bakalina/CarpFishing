@@ -1,14 +1,7 @@
-﻿var x = 6;
-var y = 15;
-var z = 4;
-
-document.write(x += y - x++ * z);
-document.write("<hr/>");
-document.write(z = --x - y * 5);
-document.write("<hr/>");
-document.write(y /= x + 5 % z);
-document.write("<hr/>");
-document.write(z = x++ + y * 5);
-document.write("<hr/>");
-document.write(x = y - x++ * z);
-document.write("<hr/>");
+﻿var r = +prompt("Введите радиус цилиндра мм.", " ");
+var h = +prompt("Введите высоту цилиндра мм.", " ");
+var p = 3.141592653589793;
+var v = p * (r * r) * h;
+var s = 2 * p * r * (h + r); 
+document.write("Обьем цилиндра = " + v + " мм." + "<br/>");
+document.write("Площадь основания цилиндра = " + s + " мм.кв.")
