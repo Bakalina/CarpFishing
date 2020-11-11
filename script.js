@@ -1,4 +1,5 @@
-var a = " Ó‰";
-if (a == " Ó‰") { alert("1111 "); }
-else { alert("2222 "); }
-alert("Hello");
+Ôªøvar x = 6;
+var y = 15;
+var x = 4;
+
+document.write(
