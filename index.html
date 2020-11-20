@@ -1,46 +1,51 @@
 ﻿<html>
 
 <head>
-     <title></title>
-     <!-- Создайте на странице заголовок «Title of page» первого уровня. 
-     Поместите его в тег для заголовков header. 
-     В теге для навигации по сайту создайте три ссылки с текстом «Link 1», «Link 2» и «Link 3»
-     соответственно (используйте атрибут со href со значением «#»).
-     Создайте боковую панель с помощью специального тега. Поместите в него два параграфа с текстом «Paragraph 1» и «Paragraph 2». 
-     В теге, который задает содержание сайта вроде новости, статьи создайте заголовок в теге header с текстом «Title of article»,
-     параграф с текстом «Some text» и подвал статьи «Footer of article». Для каждого элемента должен использоваться свой определенный тег.
-     Продублируйте созданный блок кода. Созданные две статьи оберните в тег, который представляет собой универсальный раздел документа.
-     Затем создайте подвал страницы с текстом «Footer of page». -->
+    <title></title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-     <header>
-          <h1>Title of page</h1>
-     </header>
-     <nav>
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-     </nav>
-     <aside>
-          <p>Paragraph 1</p>
-          <p>Paragraph 2</p>
-     </aside>
-     <section>
-          <article>
-               <header>Title of article</header>
-               <p>Some text</p>
-               <footer>Footer of article</footer>
-          </article>
-          <article>
-               <header>Title of article</header>
-               <p>Some text</p>
-               <footer>Footer of article</footer>
-
-
-          </article>
-     </section>
-     <footer>Footer of page</footer>
+    <form>
+        <label>
+            Solid
+            <input type="range" name="solid" />
+        </label>
+        <br />
+        <label>
+            Numeric spinner
+            <input type="number" name="Numericspinner" />
+        </label>
+        <br />
+        <label>
+            Date picker
+            <input type="date" name="Datepicker" />
+        </label>
+        <br />
+        <label>
+            Color picker
+            <input type="color" name="Colorpicker" />
+        </label>
+        <br />
+        <label>
+            Text field with placeholder
+            <input type="text" name="text" placeholder="Insert your text here" />
+        </label>
+        <br />
+        <label>
+            Url field
+            <input type="url" name="website" placeholder="http://net.tutsplus.com" />
+        </label>
+        <br />
+        <label>
+            Email field
+            <input type="email" name="email" placeholder="contact@ghinda.net" />
+        </label>
+        <br />
+        <div class="but">
+            <input type="button" name="Submitform" value="Submit form" />
+        </div>
+    </form>
 </body>
 
 </html>

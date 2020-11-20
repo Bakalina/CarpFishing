@@ -1,0 +1,22 @@
+form {
+    background: silver;
+    width: 25%;
+    height: auto;
+    font-size: 24px;
+    text-align: right;
+    margin: 20px;
+    padding: 20px;
+}
+input {
+    width: 200px;
+}
+
+.but input {
+    padding: auto;
+    height: 40px;
+    width: 150px;
+    margin:20px 50px 0 0;
+    font-size: 20px;
+
+
+}
