@@ -1,7 +1,9 @@
-﻿var r = +prompt("Введите радиус цилиндра мм.", " ");
-var h = +prompt("Введите высоту цилиндра мм.", " ");
-var p = 3.141592653589793;
-var v = p * (r * r) * h;
-var s = 2 * p * r * (h + r); 
-document.write("Обьем цилиндра = " + v + " мм." + "<br/>");
-document.write("Площадь основания цилиндра = " + s + " мм.кв.")
+﻿// var a = 1;
+// var b = 50;
+// var i = 100;
+// for (var c = a; c < b; c++) {
+//     for (var d = a; d < i; d++) {
+//         document.write("X");
+//     }
+//     document.write("<br/>");
+// }
