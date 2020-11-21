@@ -1,51 +1,34 @@
 ﻿<html>
-
-<head>
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <form>
-        <label>
-            Solid
-            <input type="range" name="solid" />
-        </label>
-        <br />
-        <label>
-            Numeric spinner
-            <input type="number" name="Numericspinner" />
-        </label>
-        <br />
-        <label>
-            Date picker
-            <input type="date" name="Datepicker" />
-        </label>
-        <br />
-        <label>
-            Color picker
-            <input type="color" name="Colorpicker" />
-        </label>
-        <br />
-        <label>
-            Text field with placeholder
-            <input type="text" name="text" placeholder="Insert your text here" />
-        </label>
-        <br />
-        <label>
-            Url field
-            <input type="url" name="website" placeholder="http://net.tutsplus.com" />
-        </label>
-        <br />
-        <label>
-            Email field
-            <input type="email" name="email" placeholder="contact@ghinda.net" />
-        </label>
-        <br />
-        <div class="but">
-            <input type="button" name="Submitform" value="Submit form" />
-        </div>
-    </form>
-</body>
-
+    <head>
+        <title></title>
+    </head>
+    <body>
+    <div itemscope itemtype="http://schema.org/Book">
+        <span itemprop="name">Над пропастью во ржи</span>
+        <span itemprop="author">Джером Сэлинджер</span>
+        <span itemprop="datePublished">1951</span>
+    </div>
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">Металлистов,7</span>
+        <span itemprop="postalCode">03057</span>
+        <span itemprop="addressLocality">Киев</span>
+    </div>
+    <div itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Никола Тесла</span>
+        <img itemprop="image" src="photo.png" />
+        <a itemprop="url" href="https://ru.wikipedia.org/wiki/Тесла,_Никола">Страница в Википедии</a>
+    </div>
+    </body>
 </html>
+
+
+<!-- Создайте 3 тега <div></div>. Каждому из них задайте свою область действия микро данных. Первому div укажите тип данных Book.
+Внутри него создайте 3 тега <span></span>. Первому тегу добавьте текст «Над пропастью во ржи», второму - «Джером Сэлинджер», третьему – «1951».
+Также каждому из <span> добавьте атрибут для добавления свойств словаря микроданных.
+В качестве значений этих атрибутов, первому присвойте «name», второму «author», третьему – «datePublished».
+По аналогии с предыдущим <div>, второму задайте тип PostalAddress.
+В первом атрибуту itemprop укажите значение «streetAddress» и текст внутри тега «Металлистов, 7», второму – «postalCode» и текст «03057»,
+третьему – «addressLocality» и «Киев». Далее третьему <div> укажите тип данных Person.
+Внутри него создайте 3 тега в таком порядке: <span></span>, <img />, <a></a>.
+В тег <span> запишите текст «Никола Тесла» и itemprop – «name»; В качестве значения атрибута src тега <img /> укажите «photo.png» и itemprop – «image».
+Далее в качестве значения атрибута href тега <а> адрес «https://ru.wikipedia.org/wiki/Тесла,_Никола» и укажите itemprop – «url» и, а текст внутри тега – «Страница в Википедии». -->
