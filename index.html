@@ -1,24 +1,55 @@
-﻿<html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-    <div itemscope itemtype="http://schema.org/Book">
-        <span itemprop="name">Над пропастью во ржи</span>
-        <span itemprop="author">Джером Сэлинджер</span>
-        <span itemprop="datePublished">1951</span>
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Geolocation API</title>
+    <script type="text/javascript" src="maps.googleapis.com/maps/api/js?libraries=places&key="></script>
+</head>
+
+<body>
+    <div id="map" style="height: 600px; width: 1200px;">
     </div>
-    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        <span itemprop="streetAddress">Металлистов,7</span>
-        <span itemprop="postalCode">03057</span>
-        <span itemprop="addressLocality">Киев</span>
-    </div>
-    <div itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">Никола Тесла</span>
-        <img itemprop="image" src="photo.png" />
-        <a itemprop="url" href="https://ru.wikipedia.org/wiki/Тесла,_Никола">Страница в Википедии</a>
-    </div>
-    </body>
+    <p id="message">
+    </p>
+    <script type="text/javascript">
+        navigator.geolocation.getCurrentPosition(updatePosition);
+
+        function updatePosition(pos) {
+            // задание координат.
+            var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+            document.getElementById("message").innerHTML = "Позиция определена с точностью в " + pos.coords.accuracy +
+                " метров.";
+
+            // параметры для карты.
+            var options = {
+                zoom: 15,
+                center: position, // позиция на карте
+                mapTypeId: google.maps.MapTypeId.ROADMAP // тип карты - ROADMAP, SATELLITE, HYBRID and TERRAIN
+            };
+
+            // объект карты.
+            var map = new google.maps.Map(document.getElementById("map"), options);
+
+            // маркер на карте
+            var marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title: "Это Вы!"
+            });
+
+            // объект всплывающей подсказки.
+            var infowindow = new google.maps.InfoWindow({
+                content: "Скорее всего, это Ваше текущее положение"
+            });
+
+            // присвоение обработчика на нажатие по маркеру.
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+</body>
+
 </html>
 
 
@@ -32,3 +63,20 @@
 Внутри него создайте 3 тега в таком порядке: <span></span>, <img />, <a></a>.
 В тег <span> запишите текст «Никола Тесла» и itemprop – «name»; В качестве значения атрибута src тега <img /> укажите «photo.png» и itemprop – «image».
 Далее в качестве значения атрибута href тега <а> адрес «https://ru.wikipedia.org/wiki/Тесла,_Никола» и укажите itemprop – «url» и, а текст внутри тега – «Страница в Википедии». -->
+
+
+<!-- <div itemscope itemtype="http://schema.org/Book">
+        <span itemprop="name">Над пропастью во ржи</span>
+        <span itemprop="author">Джером Сэлинджер</span>
+        <span itemprop="datePublished">1951</span>
+    </div>
+    <div itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">Металлистов,7</span>
+        <span itemprop="postalCode">03057</span>
+        <span itemprop="addressLocality">Киев</span>
+    </div>
+    <div itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Никола Тесла</span>
+        <img itemprop="image" src="photo.png" />
+        <a itemprop="url" href="https://ru.wikipedia.org/wiki/Тесла,_Никола">Страница в Википедии</a>
+    </div> -->
