@@ -7,22 +7,19 @@
     </body>
     <script>      
         var context = document.getElementById("canvas").getContext("2d");
-        var pattern = new Image(); 
-        pattern.src = "picture.png";
 
-        pattern.addEventListener("load", function() { 
-            var pattern = context.drawPattern(pattern, 'repeat');
+        var gradient = context.createRadialGradient(300, 300, 0, 300, 300, 250);
+        gradient.addColorStop(0, "Black");
+        gradient.addColorStop(0.4, "yellow");
+        gradient.addColorStop(0.75, "red");
+        gradient.addColorStop(1, "white");
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, 600, 600);
 
-            context.drawPicture(0, 0, pattern);
 
-            context.fillStyle = pattern;
-            context.fillRect("300", "0", "300", "600");
-        }, false);
     </script>
 </html>
 
 
 
-<!-- Нарисуйте на холсте квадрат размерами 400х400 пикселей с помощью метода strokeRect()
- с координатами левого верхнего угла (100, 100). Внутрь квадрата поместите второй квадрат синего цвета,
-  нарисованный уже с помощью метода fillRect(), со сторонами по 200 пикселей. Координаты левого верхнего угла (200,200). -->
+<!-- Переместите холст так, чтобы нарисованный квадрат оказался в нижнем правом углу. Потом разверните квадрат на 180 градусов. -->
