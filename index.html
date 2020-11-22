@@ -1,47 +1,28 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<html>
+    <head>
+        <title></title>        
+    </head>
+    <body>        
+        <canvas id="canvas" height="600" width="600"></canvas>        
+    </body>
+    <script>      
+        var context = document.getElementById("canvas").getContext("2d");
+        var pattern = new Image(); 
+        pattern.src = "picture.png";
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
+        pattern.addEventListener("load", function() { 
+            var pattern = context.drawPattern(pattern, 'repeat');
 
-<body>
-    <canvas id=c ></canvas>
-    <canvas id=bg></canvas>
-</body>
+            context.drawPicture(0, 0, pattern);
 
+            context.fillStyle = pattern;
+            context.fillRect("300", "0", "300", "600");
+        }, false);
+    </script>
 </html>
 
 
 
-<!-- Создайте 3 тега <div></div>. Каждому из них задайте свою область действия микро данных. Первому div укажите тип данных Book.
-Внутри него создайте 3 тега <span></span>. Первому тегу добавьте текст «Над пропастью во ржи», второму - «Джером Сэлинджер», третьему – «1951».
-Также каждому из <span> добавьте атрибут для добавления свойств словаря микроданных.
-В качестве значений этих атрибутов, первому присвойте «name», второму «author», третьему – «datePublished».
-По аналогии с предыдущим <div>, второму задайте тип PostalAddress.
-В первом атрибуту itemprop укажите значение «streetAddress» и текст внутри тега «Металлистов, 7», второму – «postalCode» и текст «03057»,
-третьему – «addressLocality» и «Киев». Далее третьему <div> укажите тип данных Person.
-Внутри него создайте 3 тега в таком порядке: <span></span>, <img />, <a></a>.
-В тег <span> запишите текст «Никола Тесла» и itemprop – «name»; В качестве значения атрибута src тега <img /> укажите «photo.png» и itemprop – «image».
-Далее в качестве значения атрибута href тега <а> адрес «https://ru.wikipedia.org/wiki/Тесла,_Никола» и укажите itemprop – «url» и, а текст внутри тега – «Страница в Википедии». -->
-
-
-<!-- <div itemscope itemtype="http://schema.org/Book">
-        <span itemprop="name">Над пропастью во ржи</span>
-        <span itemprop="author">Джером Сэлинджер</span>
-        <span itemprop="datePublished">1951</span>
-    </div>
-    <div itemscope itemtype="http://schema.org/PostalAddress">
-        <span itemprop="streetAddress">Металлистов,7</span>
-        <span itemprop="postalCode">03057</span>
-        <span itemprop="addressLocality">Киев</span>
-    </div>
-    <div itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">Никола Тесла</span>
-        <img itemprop="image" src="photo.png" />
-        <a itemprop="url" href="https://ru.wikipedia.org/wiki/Тесла,_Никола">Страница в Википедии</a>
-    </div> -->
+<!-- Нарисуйте на холсте квадрат размерами 400х400 пикселей с помощью метода strokeRect()
+ с координатами левого верхнего угла (100, 100). Внутрь квадрата поместите второй квадрат синего цвета,
+  нарисованный уже с помощью метода fillRect(), со сторонами по 200 пикселей. Координаты левого верхнего угла (200,200). -->
