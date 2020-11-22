@@ -1,56 +1,21 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Geolocation API</title>
-    <script type="text/javascript" src="maps.googleapis.com/maps/api/js?libraries=places&key="></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <div id="map" style="height: 600px; width: 1200px;">
-    </div>
-    <p id="message">
-    </p>
-    <script type="text/javascript">
-        navigator.geolocation.getCurrentPosition(updatePosition);
-
-        function updatePosition(pos) {
-            // задание координат.
-            var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
-            document.getElementById("message").innerHTML = "Позиция определена с точностью в " + pos.coords.accuracy +
-                " метров.";
-
-            // параметры для карты.
-            var options = {
-                zoom: 15,
-                center: position, // позиция на карте
-                mapTypeId: google.maps.MapTypeId.ROADMAP // тип карты - ROADMAP, SATELLITE, HYBRID and TERRAIN
-            };
-
-            // объект карты.
-            var map = new google.maps.Map(document.getElementById("map"), options);
-
-            // маркер на карте
-            var marker = new google.maps.Marker({
-                position: position,
-                map: map,
-                title: "Это Вы!"
-            });
-
-            // объект всплывающей подсказки.
-            var infowindow = new google.maps.InfoWindow({
-                content: "Скорее всего, это Ваше текущее положение"
-            });
-
-            // присвоение обработчика на нажатие по маркеру.
-            google.maps.event.addListener(marker, 'click', function () {
-                infowindow.open(map, marker);
-            });
-        }
-    </script>
+    <canvas id=c ></canvas>
+    <canvas id=bg></canvas>
 </body>
 
 </html>
+
 
 
 <!-- Создайте 3 тега <div></div>. Каждому из них задайте свою область действия микро данных. Первому div укажите тип данных Book.
