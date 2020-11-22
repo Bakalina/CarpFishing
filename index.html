@@ -3,23 +3,35 @@
         <title></title>        
     </head>
     <body>        
-        <canvas id="canvas" height="600" width="600"></canvas>        
+           <canvas id="canvas"></canvas>     
     </body>
     <script>      
-        var context = document.getElementById("canvas").getContext("2d");
+        var canvas = document.getElementById("canvas");
+        var context = canvas.getContext("2d");
 
-        var gradient = context.createRadialGradient(300, 300, 0, 300, 300, 250);
-        gradient.addColorStop(0, "Black");
-        gradient.addColorStop(0.4, "yellow");
-        gradient.addColorStop(0.75, "red");
-        gradient.addColorStop(1, "white");
-        context.fillStyle = gradient;
-        context.fillRect(0, 0, 600, 600);
+        var img = new Image();
+        img.src = "picture.png";
+        img.onload = load;
+
+        function load() {
+                context.transform(2, 2, 0.5, 1, 0, 0);
+                context.drawImage(img, 0, 0, 150, 150);
+                context.restore();
+            }
+        
 
 
-    </script>
+
+      </script>
 </html>
 
 
 
-<!-- Переместите холст так, чтобы нарисованный квадрат оказался в нижнем правом углу. Потом разверните квадрат на 180 градусов. -->
+<!-- Создайте на странице элемент . Присвойте ему id, значение которого - «canvas».
+    Получите ссылку на елемент canvas с помощью метода getElementById() и присвойте ее в качестве значения в переменной «canvas».
+    Создайте переменную «context». В неё запишите полученный графический контекст элемента canvas. Создайте переменную img.
+    В неё запишите, созданный с помощью конструктора Image(), элемент изображения. Укажите путь к изображению - "picture.png".
+    Назначьте созданному элементу функцию-обработчик на событие "load".
+    Внутри этой функции нужно трансформировать полученное изображение,
+    задав матрицу трансформации: масштаб по оси Х и У – 2; искривление по оси Х и У – 0,5 и 1 соответственно; перемещение по оси Х и У – 0.
+    В конце отрисуйте на холсте изображение с параметрами: верхний левый угол – (0,0); ширина и высота по 150 пикселей. -->
