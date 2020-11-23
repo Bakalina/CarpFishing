@@ -1,37 +1,51 @@
 ﻿<html>
-    <head>
-        <title></title>        
-    </head>
-    <body>        
-           <canvas id="canvas"></canvas>     
-    </body>
-    <script>      
-        var canvas = document.getElementById("canvas");
-        var context = canvas.getContext("2d");
 
-        var img = new Image();
-        img.src = "picture.png";
-        img.onload = load;
+<head>
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        function load() {
-                context.transform(2, 2, 0.5, 1, 0, 0);
-                context.drawImage(img, 0, 0, 150, 150);
-                context.restore();
-            }
-        
+<body>
+    <form>
+        <label>
+            Solid
+            <input type="range" name="solid" />
+        </label>
+        <br />
+        <label>
+            Numeric spinner
+            <input type="number" name="Numericspinner" />
+        </label>
+        <br />
+        <label>
+            Date picker
+            <input type="date" name="Datepicker" />
+        </label>
+        <br />
+        <label>
+            Color picker
+            <input type="color" name="Colorpicker" />
+        </label>
+        <br />
+        <label>
+            Text field with placeholder
+            <input type="text" name="text" placeholder="Insert your text here" />
+        </label>
+        <br />
+        <label>
+            Url field
+            <input type="url" name="website" placeholder="http://net.tutsplus.com" />
+        </label>
+        <br />
+        <label>
+            Email field
+            <input type="email" name="email" placeholder="contact@ghinda.net" />
+        </label>
+        <br />
+        <div class="but">
+            <input type="button" name="Submitform" value="Submit form" />
+        </div>
+    </form>
+</body>
 
-
-
-      </script>
 </html>
-
-
-
-<!-- Создайте на странице элемент . Присвойте ему id, значение которого - «canvas».
-    Получите ссылку на елемент canvas с помощью метода getElementById() и присвойте ее в качестве значения в переменной «canvas».
-    Создайте переменную «context». В неё запишите полученный графический контекст элемента canvas. Создайте переменную img.
-    В неё запишите, созданный с помощью конструктора Image(), элемент изображения. Укажите путь к изображению - "picture.png".
-    Назначьте созданному элементу функцию-обработчик на событие "load".
-    Внутри этой функции нужно трансформировать полученное изображение,
-    задав матрицу трансформации: масштаб по оси Х и У – 2; искривление по оси Х и У – 0,5 и 1 соответственно; перемещение по оси Х и У – 0.
-    В конце отрисуйте на холсте изображение с параметрами: верхний левый угол – (0,0); ширина и высота по 150 пикселей. -->
