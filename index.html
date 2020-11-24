@@ -3,16 +3,19 @@
         <title></title>
     </head>
     <body>
+        <span id="output"></span>
     </body>
     <script>
-        if (window.localStorage) {
-            document.write("Браузер поддерживает localStorage");
-        } else {
-            document.write("Браузер не поддерживает localStorage");
-        };        
+        var key, value;
+        window.localStorage.setItem("aaa", "111");
+        window.localStorage.setItem("bbb", "222");
+        window.localStorage.setItem("ccc", "333");
+        window.localStorage.setItem("ddd", "444");
+        key = window.localStorage.getItem("key2");
+        value = window.localStorage.getItem("key");
+
+
+
     </script>
 </html>
 
-<!-- Проверьте браузер на поддержку localStorage. Используйте условный оператор if...else.
- Если условие верно, то выведите на экран с помощью метода document.write()
-  сообщение - "Браузер поддерживает localStorage", а если нет - "Браузер не поддерживает localStorage" -->
