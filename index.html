@@ -2,23 +2,24 @@
     <head>
         <title></title>
         <style>
-            input[required] {
-                border: 1px solid red;
+            a[href^="https://"] {
+                font-family: monospace;
+                font-size: 22px;
             }
-            input[type=submit] {
-                color: green;
+            a[href*="itvdn"] {
+                color: gold;
+            }
+            a[href$=".com"] {
+                background: url(image/com.png) no-repeat 0 50%; 
             }
         </style>
     </head>
     <body>
-        <input type="text">
-        <input type="text" required="required">
-        <input type="submit">
-    </body>
+        <a href="https://itvdn.com">ITVDN.com</a>        
+    </body>    
 </html>
 
-<!-- Создайте 3 поля ввода для текста.
-    Первому задайте тип text, второму тип text и атрибут required, а третьему input укажите тип submit.
-    В теге style определите следующие стили: если элемент input содержит атрибут required,
-    то задайте ему красную цельную рамку толщиной 1px (сначала укажите толщину, стиль, потом цвет);
-    если значение атрибута type элемента input равно submit, то задайте ему цвет текста – зеленый. -->
+<!-- Добавьте на страницу тег <div></div> с классом hero.
+В теге <style><style> селектору классу hero установите свойства:
+высота 200px; фоновое изображение - image.png, без повторений по оси Х и У;
+фон должен занимать половину ширины и высоты элемента. -->
