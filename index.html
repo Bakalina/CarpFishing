@@ -1,23 +1,24 @@
 ﻿<html>
     <head>
         <title></title>
+        <style>
+            input[required] {
+                border: 1px solid red;
+            }
+            input[type=submit] {
+                color: green;
+            }
+        </style>
     </head>
     <body>
-        <span id="output"></span>
+        <input type="text">
+        <input type="text" required="required">
+        <input type="submit">
     </body>
-    <script>
-        var obj = {
-            prop1: "val1",
-            prop2: "val2",
-            prop3: "val3"
-        };
-        window.localStorage.obj = JSON.stringify(obj);   
-        window.sessionStorage.obj = JSON.stringify(obj);     
-
-
-
-    </script>
 </html>
 
-<!-- Получите данные из локального хранилища по ключу «obj» и возвращаемое значение запишите в переменную «data».
- Создайте переменную «obj». Запишите в неё значение, которое возвращает метод JSON.parse(). В качестве параметра, передайте этому методу переменную «data». -->
+<!-- Создайте 3 поля ввода для текста.
+    Первому задайте тип text, второму тип text и атрибут required, а третьему input укажите тип submit.
+    В теге style определите следующие стили: если элемент input содержит атрибут required,
+    то задайте ему красную цельную рамку толщиной 1px (сначала укажите толщину, стиль, потом цвет);
+    если значение атрибута type элемента input равно submit, то задайте ему цвет текста – зеленый. -->
