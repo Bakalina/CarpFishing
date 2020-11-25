@@ -2,24 +2,32 @@
     <head>
         <title></title>
         <style>
-            a[href^="https://"] {
-                font-family: monospace;
-                font-size: 22px;
+            div {
+                height: 200px;
+                width: 300px;
+                background-image: url(image.png);
+                background-repeat: no-repeat;
             }
-            a[href*="itvdn"] {
-                color: gold;
+            #first {
+                background-size: contain;
             }
-            a[href$=".com"] {
-                background: url(image/com.png) no-repeat 0 50%; 
+            #second {
+                background-size: cover;
             }
         </style>
     </head>
     <body>
-        <a href="https://itvdn.com">ITVDN.com</a>        
+        <div id="first"></div>
+        <div id="second"></div> 
     </body>    
 </html>
 
-<!-- Добавьте на страницу тег <div></div> с классом hero.
-В теге <style><style> селектору классу hero установите свойства:
-высота 200px; фоновое изображение - image.png, без повторений по оси Х и У;
-фон должен занимать половину ширины и высоты элемента. -->
+<!-- Добавьте на страницу 2 тега . Первому установите идентификатор first, а второму – second.
+     Создайте селектор тега div и два селектора идентификатора с именами first и second.
+      Селектору тега укажите свойства: высота и ширина элемента - 200px и 300px;
+       фоновое изображение – image.png, без повторений по оси Х и У.
+        Селекторы идентификатора должны содержать только одно свойство - background-size.
+         Для дива c id «first» оно принимает значение, при котором изображение фона увеличивается в размере,
+          сохраняя пропорции до тех пор, пока его высота или ширина не будет равна высоте или ширине блока.
+           Для второго дива c id «second» оно принимает значение,
+            при котором изображение фона увеличивается и сохраняет пропорции таким образом, чтобы картинка поместилась целиком внутрь блока -->
