@@ -1,22 +1,19 @@
 ﻿<html>
     <head>
         <title></title>
-        <style>            
-            .container {
-                display: flex;
-                align-items: center;
-                flex-flow: column wrap;
+        <style>
+            div::after {
+                content: '!!!';
+                font-size: 2em;
             }
-        </style>  
-    </head>
+        </style> 
+    </head>  
     <body>
-        <div class="container">
-            <div>Text</div>
-            <img src="path.png">
-            <span>Text</span>
-        </div>
-    </body>    
+        <div>item1</div>
+        <div>item2</div>
+        <div>item3</div>
+    </body>
 </html>
 
-<!-- Выровняйте элементы, которые находятся внутри дива с классом container, вертикально по центру flex-контейнера.
-     Потом установите направление главной оси – column и многострочность поперечной оси - wrap. Используйте для этого краткую запись. -->
+<!-- Создайте 3 элемента div на странице с текстом «item1», «item2» и «item3» соответственно.
+     В теге style укажите, что после содержимого элемента div необходимо сгенерировать текст «!!!». Также укажите размер генерируемого текста - 2em. -->
