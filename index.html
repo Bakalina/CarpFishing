@@ -2,20 +2,20 @@
     <head>
         <title></title>
         <style>
-            #gradient {
-                width: 350px;
-                height: 350px;
-                background: radial-gradient(pink 20%, red 80%);
-                border:  2px solid black;
+            input:checked + label {
+                text-decoration: underline;
+                color: red;
+                font-weight: bold;
             }
         </style> 
     </head>  
     <body>
-        <div id="gradient"></div> 
+        <input type="checkbox"><label>First</label>
+        <input type="checkbox"><label>Second</label>
+        <input type="checkbox"><label>Third</label>
     </body>
 </html>
 
-<!-- Создайте на странице див с идентификатором gradient.
-     В теге для определения стилей, установите ему ширину и высоту по 350px.
-      В качестве фона укажите радиальный градиент, ширина и высота которого 20% и 80% соответственно.
-       Первый цвет – розовый, второй – красный. Также добавьте рамку, использовав общее свойство border с параметрами: толщина 2 пикселя, цельная, черного цвета. -->
+<!-- Создайте на странице 3 инпута типа checkbox. После каждого инпута в теге <label> поместите текст:
+     в первом "First", во втором "Second", в третьем - "Third". В теге <style> определите следующие стили
+          для лейблов, которые следуют непосредственно после чекбоксов, когда те в положении "включено": нижнее подчеркивание текста, красный цвет текста, и жирное начертание. -->
