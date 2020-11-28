@@ -2,21 +2,22 @@
     <head>
         <title></title>
         <style>
-            div:not([class=other]) {
-                font-size: 2em;
-                font-family: 'Courier New';
+            a:link {
+                color: green;
+                background-color: white;
+                padding: 2px;
+                border-radius: 5px;
+                text-decoration: none;                 
             }
+            a:hover {
+                color: white;
+                background-color: green;
+            } 
         </style>
-    </head>  
+    </head> 
     <body>
-        <div>first div</div>
-        <div>second div</div>
-        <div class="other">third div</div>
-        <div>fourth div</div> 
+        <a href="page/1.html">Link 1</a>
+        <a href="page/2.html">Link 2</a>
+        <a href="page/3.html">Link 3</a>        
     </body>
 </html>
-
-
-<!-- Добавьте на страницу 4 дива с текстом «first div», «second div», «third div» и «fourth div» соответственно.
-     Третьему задайте класс «other». Используя тег для задания стилей, необходимо установить всем дивам,
-      кроме дива с классом other, стили: размер шрифта - 2em, тип шрифта - "Courier New". Используйте специальный псевдокласс. -->
