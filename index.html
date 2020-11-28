@@ -2,17 +2,19 @@
     <head>
         <title></title>
         <style>
-            p:only-of-type {
-                font-size: 1.5em;
-                padding: 10px;
-                font-family: Arial;
+            input:valid {
+                border: 1px solid green;
+
+            }
+            input:invalid {
+                border: 1px solid red;
             }
         </style>
     </head>  
     <body>
-        <div>
-            <p>Text in the paragraph</p>
-        </div>
+        <input type="text">
+        <input type="email">
+        <input type="text" pattern="^[ 0-9]+$"> 
     </body>
 </html>
 
