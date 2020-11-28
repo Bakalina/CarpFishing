@@ -2,24 +2,21 @@
     <head>
         <title></title>
         <style>
-            input:read-only + label {
-                color: grey;
-                font-style: italic;
-
+            div:not([class=other]) {
+                font-size: 2em;
+                font-family: 'Courier New';
             }
         </style>
     </head>  
     <body>
-        <input id="first" type="text" readonly="readonly"><label for="first">First</label>
-        <input id="second" type="text"><label for="second">Second</label> 
+        <div>first div</div>
+        <div>second div</div>
+        <div class="other">third div</div>
+        <div>fourth div</div> 
     </body>
 </html>
 
 
-
-<!-- Необходимо создать два инпута типа text с идентификаторами «first» и «second».
-     После каждого из них создайте еще два элемента label со значениями атрибута for – «first» и «second».
-      В качестве текстового значения добавьте им «First» и «Second» соответственно.
-       Также первому инпуту установите атрибут readonly со значением «readonly».
-        В теге для задания стилей, необходимо установить для элементов label,
-         которые непосредственно следуют после недоступных для редактирования инпутов, серый цвет текста и курсивное начертание. -->
+<!-- Добавьте на страницу 4 дива с текстом «first div», «second div», «third div» и «fourth div» соответственно.
+     Третьему задайте класс «other». Используя тег для задания стилей, необходимо установить всем дивам,
+      кроме дива с классом other, стили: размер шрифта - 2em, тип шрифта - "Courier New". Используйте специальный псевдокласс. -->
