@@ -1,23 +1,29 @@
-﻿<html>
-    <head>
-        <title></title>
-        <style>
-            a:link {
-                color: green;
-                background-color: white;
-                padding: 2px;
-                border-radius: 5px;
-                text-decoration: none;                 
-            }
-            a:hover {
-                color: white;
-                background-color: green;
-            } 
-        </style>
-    </head> 
-    <body>
-        <a href="page/1.html">Link 1</a>
-        <a href="page/2.html">Link 2</a>
-        <a href="page/3.html">Link 3</a>        
-    </body>
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    <style>
+        div {
+            background-color: lightblue;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Hello world
+    </div>
+    <script>
+        let div = document.querySelector("div");
+        div.addEventListener("click", function () {
+            div.innerText = "Привет мир!";
+        })
+    </script>
+</body>
+
 </html>
