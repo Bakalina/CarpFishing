@@ -4,28 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шаблонные строки</title>
+    <title>Преобразование к числовому типу</title>
 </head>
 
 <body>
     <script>
-        let items = 3;
-        let totalPrice = 230;
+        // преобразование типов - преобразование значения одного типа в значение другого типа
+        // преобразование может выполняться через вызов специальных фуркций или автоматически
 
-        // конкатенация
-        let message1 = "Товаров в корзине - " + items + ". Общая стоимость " + totalPrice + " $.";
-        console.log(message1);
+        console.log("10" / "2"); // автоматическое преобразование
+        console.log("10" + "2"); // исключение, при сложении строк преобразование к number не производится
 
-        // использование шаблонных строк (template literal)
-        // для создания шаблонной строки используются обратные кавычки (`) вместо одинарных (') или двойных (")
-        // в шаблонную строку можно внедрить значение с помощью ${значение}
-        let message2 = `Товаров в корзине - ${items}. Общая стоимость ${totalPrice}$.`;
-        let message3 = `Товаров в корзине - ${items}. Общая стоимость ${totalPrice}$.`;
+        let value = "100"; // тип данных string
+        console.log(typeof value);
 
-        let x = 10;
-        let y = 20;
-        let sum = x + y;
-        console.log(`Сумма двух чисел ${x} и ${y} равна ${sum}`);
+        let newValue = Number(value); // преобразование к типу number
+        console.log(typeof newValue);
+
+        // при попытке преобразовать к числу значение, которое не может быть числом, функция Number вернет NaN
+        let someText = "hello";
+        let converted = Number(someText);
+        console.log(converted);
+
+        // при попытке преобразовать null, функция вернет 0
+        console.log(Number(null));
+
+        // при попытке преобразовать логическое значение, функиця Number для false вернет 0, для true - 1
+        console.log(Number(true));
+        console.log(Number(false));
+
+        // при преобразовании строки, пробелы в начале и конце строки удаляются
+        console.log(Number("   5   ") + 1);
 
     </script>
 </body>
