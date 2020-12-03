@@ -4,30 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бинарные операции</title>
+    <title>Инкремент</title>
 </head>
 
 <body>
     <script>
-        let x = 100;
-        let y = 20;
+        let value = 10;
 
-        let result;
+        // инкремент, унарный оператор, который позволяет увеличить значение переменной на 1
+        console.log("инкремент");
+        value++; // value = value + 1;
+        console.log(value); // 11
 
-        result = x + y; // сложение, result = 120
-        result = x - y; // вычитание, result = 80
-        result = x / y; // деление, result = 5
-        result = x * y; // умножение, result = 2000
+        console.log(++value); // (12) префиксная форма, оператор выполняет увеличение значения на 1 и возвращает новое значение
+        console.log(value++); // (12) постфиксная форма, оператор выполняет увеличение значения на 1 и возвращает старое значение
+        console.log(value);   // (13)
 
-        // остаток от деления
-        result = x % y; // result - 0
-        result = 10 % 3; // result - 1
-        result = 10 % 6; // result - 4
+        // декремент, унарный оператор, который позволяет уменьшить значение переменной на 1
+        console.log("декремент");
+        value = 10;
+        value--; // value = value - 1;
+        console.log(value); // 9
 
-        // возведение в степень
-        result = x ** 2; // x в квадрате, result = 10000
-        result = y ** 5; // y в пятой степени, result = 3200000
-        alert(result);
+        console.log(--value); // (8) префиксная форма, оператор выполняет уменьшение значения на 1 и возвращает новое значение
+        console.log(value--); // (8) постфиксная форма, оператор выполняет уменьшение значения на 1 и возвращает старое значение
+        console.log(value);   // (7)
     </script>
 </body>
 
