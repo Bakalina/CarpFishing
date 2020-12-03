@@ -4,23 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Преобразование к логическому типу</title>
+    <title>Task 1</title>
 </head>
 
 <body>
+    <pre>
+        Задание:
+        Исправьте ошибки, добавив недостающие операторы
+    </pre>
     <script>
-        // При преобразовании null, undefined, 0, пустой строки или значения NaN - результат false
-        // Все остальные значения - результат true
-        let value = "test";
-        console.log(typeof value); // string
+        let product1 = "Бумага офисная А4, 80 г/м2, 500 л";
+        let product2 = "Биндеры для бумаги 51 мм";
+        let product3 = "Ручка шариковая синяя";
 
-        let result = Boolean(value);
-        console.log(typeof result); // boolean
-        console.log(result);
+        let productPrice1 = 280.25;
+        let productPrice2 = 56;
+        let productPrice3 = 12.50;
 
-        console.log(Boolean(null)); // false
-        console.log(Boolean("")); // false
-        console.log(Boolean(1)); // true
+        let productQuantity1 = +prompt(`Укажите количество продуктов '${product1}', цена ${productPrice1}`, 0);
+        let productQuantity2 = +prompt(`Укажите количество продуктов '${product2}', цена ${productPrice2}`, 0);
+        let productQuantity3 = +prompt(`Укажите количество продуктов '${product3}', цена ${productPrice3}`, 0);
+
+        let totalPrice = 0;
+
+        totalPrice = totalPrice + productPrice1 * productQuantity1;
+        totalPrice = totalPrice + productPrice2 * productQuantity2;
+        totalPrice = totalPrice + productPrice3 * productQuantity3;
+
+        alert(`Общая сумма ${totalPrice}`);
     </script>
 </body>
 
