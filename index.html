@@ -4,26 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>if statement</title>
+    <title>Пример</title>
 </head>
 
 <body>
     <script>
-        let response = prompt("Сколько будет 2 + 3?");
+        let product1 = "Бумага офисная А4, 80 г/м2, 500 л";
+        let product2 = "Биндеры для бумаги 51 мм";
+        let product3 = "Ручка шариковая синяя";
 
-        // Если необходимо выполнить несколько проверок и только одна проверка может быть успешной
-        // можно использовать несколько выражений if ... else if
-        // Блоков else if может быть неограниченное количество
-        if (response < 5) {
-            alert("Правильный ответ больше чем " + response + ".");
-        }
-        else if (response > 5) {
-            alert("Правильный ответ меньше чем " + response + ".");
+        let productPrice1 = 280.25;
+        let productPrice2 = 56;
+        let productPrice3 = 12.50;
+
+        let productQuantity1 = +prompt(`Укажите количество продуктов '${product1}', цена ${productPrice1}`, 0);
+        let productQuantity2 = +prompt(`Укажите количество продуктов '${product2}', цена ${productPrice2}`, 0);
+        let productQuantity3 = +prompt(`Укажите количество продуктов '${product3}', цена ${productPrice3}`, 0);
+
+        let totalPrice = 0;
+        totalPrice += productPrice1 * productQuantity1;
+        totalPrice += productPrice2 * productQuantity2;
+        totalPrice += productPrice3 * productQuantity3;
+
+        let shippingMessage;
+        // Если общая цена больше чем 1000, доставка бесплатная, иначе - доставка за счет получателя.
+        if (totalPrice > 1000) {
+            shippingMessage = "Доставка за наш счет";
         }
         else {
-            alert("Вы ввели правильный ответ");
+            shippingMessage = "Бесплатная доставка при заказе от 1000. Стоимость доставки 15.";
         }
 
+        alert(`Сумма Вашего заказа ${totalPrice}. ${shippingMessage}.`);
     </script>
 </body>
 
