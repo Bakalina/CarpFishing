@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бесконечный цикл while</title>
+    <title>do while</title>
 </head>
 
 <body>
     <script>
-        let x = 10
-        // так как условие всегда истинно - цикл бесконечный
-        // браузер предложит остановить выполнение подобного сценария
-        while (x > 5) {
+        // цикл do/while работает так же, как и while, но выполняет вначале итерацию, а потом проверяет условие
+        let x = 0;
+        do {
             x++;
-            console.log("итерация цикла");
+            console.log("Итерация №" + x);
         }
+        while (x < 10);
     </script>
 </body>
 
