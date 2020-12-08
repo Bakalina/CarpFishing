@@ -4,22 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>While</title>
+    <title>Бесконечный цикл while</title>
 </head>
 
 <body>
     <script>
-        let i = 0;
-
-        // while(условие) { /*тело цикла*/ }
-        // тело цикла выполняется до тех пор, пока условие истинно
-        // одно выполнение тела цикла называется итерацией
-        console.log("Начало цикла");
-        while (i < 10) {
-            i++;
-            console.log("Итерация №" + i);
+        let x = 10
+        // так как условие всегда истинно - цикл бесконечный
+        // браузер предложит остановить выполнение подобного сценария
+        while (x > 5) {
+            x++;
+            console.log("итерация цикла");
         }
-        console.log("Конец цикла");
     </script>
 </body>
 
