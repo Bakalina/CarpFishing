@@ -4,24 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Массивы</title>
+    <title>Использование индекса</title>
 </head>
 
 <body>
     <script>
-        // массив - упорядоченная коллекция значений. 
-        // элемент массива - отдельное значение массива.
+        // массив - упорядоченная коллекция значений
+        // элемент массива - отдельное значение массива
+        // индекс - числовая позиция элемента массива
 
-        let array1 = [];            // создание массива с использованием литерала (чаще используется этот вариант)
-        let array2 = new Array();   // создание массива с использованием конструктора
+        let cities = []; // создание пустого массива
 
-        let cities = ["London", "Paris", "Berlin", "Rome"]; // создание массива и заполнение массива строковыми значениями
-        let values = ["London", 123, true]; // массив может хранить разные типы данных
+        // отсчет индексов массива начинается с нуля
+        cities[0] = "London"; // присвоение значения по индексу 0
+        cities[1] = "Paris"; // присвоение значения по индексу 1
+        cities[2] = "Berlin"; // присвоение значения по индексу 2
+        cities[3] = "Rome"; // присвоение значения по индексу 3
 
-        // при использовании consol.log будут отображаться все элементы массива
-        console.log(cities);
-        console.log(values);
-        console.log(typeof values); // object - массив, особый вид объектов
+        // чтение элемента массива по индексу 0
+        let cityName = cities[0];
+        console.log("First array element - " + cityName);
+
+        cities[0] = "LONDON"; // изменение значения элемента массива
+
+        console.log(cities[0]);
+        console.log(cities[1]);
+        console.log(cities[2]);
+        console.log(cities[3]);
     </script>
 </body>
 
