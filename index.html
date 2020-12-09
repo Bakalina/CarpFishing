@@ -4,22 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Свойство length</title>
+    <title>Вывод элементов массива с помощью цикла</title>
 </head>
 
 <body>
     <script>
         let cities = ["London", "Paris", "Berlin", "Rome"];
-        console.log(cities.length); // length - свойство массива, в котором находится количество элементов массива
 
-        cities[4] = "Lisbon"; // при изменении элемента массива, который находится за пределами текущей длины массива, происходит автоматическое обновление свойства length
-        console.log(cities.length); // длина массива увеличилась на 1
-
-        cities[10] = "Madrid";
-        console.log(cities.length); // теперь длина массива 11, так как индекс последнего элемента массива 10
-
-        cities.length = 2; // установив lenth меньше размера массива, мы удалили элементы, выходящие за пределы нового размера массива
-        console.log(cities);
+        // запускаем цикл со счетчиком от 0 до 4 (длины массива)
+        for (let index = 0; index < cities.length; index++) {
+            const element = cities[index]; // обращаемся к элементу массива по индексу (значению счетчика цикла)
+            console.log(element);
+        }
     </script>
 </body>
 
