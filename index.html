@@ -4,23 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>splice</title>
+    <title>slice</title>
 </head>
 
 <body>
     <script>
-        let cities = ["London", "Paris", "Italy", "Berlin", "Rome"];
-        // начиная с индекса 2 удалить 1 элемент и заменить на три значения 
-        cities.splice(2, 1, "[Madrid]", "[Budapest]", "[Lisbon]");
-        for (const city of cities) {
-            console.log(city);
-        }
+        let characters = ["A", "B", "C", "D", "E", "F", "G"];
 
-        // Вставка значений без удаления, для этого используется значение 0 в качестве второго параметра 
-        cities.splice(1, 0, "[Athens]", "[Warsaw]");
-        for (const city of cities) {
-            console.log(city);
-        }
+        // slice(start, end);
+        // slice - возвращает новый массив, в который копирует элементы с start до end (не включая end)
+        let arr = characters.slice(1, 4);
+        console.log(arr); // B, C, D
+        console.log(characters); // A, B, C, D, E, F, G
+
     </script>
 </body>
 
