@@ -4,28 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Методы работы с началом массива</title>
+    <title>splice</title>
 </head>
 
 <body>
     <script>
-        let cities = ["London", "Paris", "Berlin", "Rome"];
+        let cities = ["London", "Paris", "Italy", "Berlin", "Rome"];
 
-        // shift() - метод массива, который удаляет первый элемент массива и возвращает его
-        let first = cities.shift(); // удаляем первый элемент массива и записываем его в переменную last
+        // splice(start, deleteCount, items...)
+        // start - индекс, с которого начать удалять элементы
+        // deleteCount - количество элементов для удаления
+        // items - значения, для добавления в массив, вместо удаленных
 
-        console.log("shift result " + first);
-        for (let index = 0; index < cities.length; index++) {
-            console.log(cities[index]);
-        }
+        cities.splice(2, 1); // начиная с индекса 2 удалить 1 элемент
+        console.log(cities);
 
-        console.log("---------------------");
-
-        // unshift(<value>) - метод, который добавляет указанное значение в начало массива
-        cities.unshift("> Lisbon <");
-        for (let index = 0; index < cities.length; index++) {
-            console.log(cities[index]);
-        }
+        cities = ["London", "Paris", "Italy", "UK", "France", "Berlin", "Rome"];
+        cities.splice(2, 3); // начиная с индекса 2 удалить 3 элемента
+        console.log(cities);
     </script>
 </body>
 
