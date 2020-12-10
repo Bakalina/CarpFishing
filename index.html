@@ -4,20 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>concat</title>
+    <title>indexof</title>
 </head>
 
 <body>
     <script>
-        let characters = ["A", "B", "C"];
-        let numbers = [1, 2, 3];
+        let cities = ["London", "Paris", "Berlin", "Rome", "Lisbon", "Rome"];
 
-        // concat - создает новый массив, копируя в него данные из указанных массивов
-        let values = characters.concat(numbers);
-        console.log(values); // A, B, C, 1, 2, 3
+        // indexOf - ищет элемент с указанным значением в массиве и возвращает его индекс, или -1, если элемент не найден
+        let index;
+        index = cities.indexOf("Rome");
+        console.log(index); // 3
 
-        let valuesExtended = characters.concat(numbers, "!", "?", "@");
-        console.log(valuesExtended); // A, B, C, 1, 2, 3, !, ?, @
+        index = cities.indexOf("Madrid");
+        console.log(index); // -1 значение не найдено
+
+        // искать индекс значения Rome, начиная с 4 индекса массива
+        index = cities.indexOf("Rome", 4);
+        console.log(index); // 5
+
+        // lastIndexOf - поиск справа налево 
+        index = cities.lastIndexOf("Rome"); // 5 
+
     </script>
 </body>
 
