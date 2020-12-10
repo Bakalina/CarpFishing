@@ -4,25 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Методы работы с концом массива</title>
+    <title>Методы работы с началом массива</title>
 </head>
 
 <body>
     <script>
         let cities = ["London", "Paris", "Berlin", "Rome"];
 
-        // pop() - метод массива, который удаляет последний элемент массива и возвращает его
-        let last = cities.pop(); // удаляем последний элемент массива и записываем его в переменную last
+        // shift() - метод массива, который удаляет первый элемент массива и возвращает его
+        let first = cities.shift(); // удаляем первый элемент массива и записываем его в переменную last
 
-        console.log("pop result " + last);
+        console.log("shift result " + first);
         for (let index = 0; index < cities.length; index++) {
             console.log(cities[index]);
         }
 
         console.log("---------------------");
 
-        // push(<value>) - метод, который добавляет указанное значение в конец массива
-        cities.push("> Lisbon <");
+        // unshift(<value>) - метод, который добавляет указанное значение в начало массива
+        cities.unshift("> Lisbon <");
         for (let index = 0; index < cities.length; index++) {
             console.log(cities[index]);
         }
