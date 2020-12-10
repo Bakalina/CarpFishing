@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slice</title>
+    <title>concat</title>
 </head>
 
 <body>
     <script>
-        let characters = ["A", "B", "C", "D", "E", "F", "G"];
+        let characters = ["A", "B", "C"];
+        let numbers = [1, 2, 3];
 
-        // slice(start, end);
-        // slice - возвращает новый массив, в который копирует элементы с start до end (не включая end)
-        let arr = characters.slice(1, 4);
-        console.log(arr); // B, C, D
-        console.log(characters); // A, B, C, D, E, F, G
+        // concat - создает новый массив, копируя в него данные из указанных массивов
+        let values = characters.concat(numbers);
+        console.log(values); // A, B, C, 1, 2, 3
 
+        let valuesExtended = characters.concat(numbers, "!", "?", "@");
+        console.log(valuesExtended); // A, B, C, 1, 2, 3, !, ?, @
     </script>
 </body>
 
