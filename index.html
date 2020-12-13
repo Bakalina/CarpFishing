@@ -4,21 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Default parameter</title>
+    <title>Возврат результата работы функции</title>
 </head>
 
 <body>
     <script>
-        // Если значение для параметра repeatCount не будет предоставлено при вызове, будет использоваться значение по умолчанию - 1
-        function showMessage(text, repeatCount = 1) {
-            for (let i = 0; i < repeatCount; i++) {
-                console.log(text);
-            }
+        // В функциях можно использовать ключевое слово return для того, чтобы вернуть значение в часть кода, которая вызывала функцю
+        // Инструкция return прекращает выполнение функции - любые оставшиеся инструкции в функции не выполнятся.
+        function sum(x, y) {
+            let sumResult = x + y;
+            return sumResult;
+
+            // return x + y; // После return может следовать выражение. Результат выполнения выражения будет возвращаемым значением. 
+
+            console.log("Код после return не выполняется."); // эта инструкция не сработает, так как return завершает работу функции
         }
 
-        showMessage("Hello world"); // так как нет второго значения при вызове - используется значение по умолчанию для параметра repeatCount 
-        showMessage("Привет мир", 2);
-        showMessage("ABC");
+        let result = sum(10, 20); // функция возвращает значение, которое будет записано в переменную result
+        console.log(result);
     </script>
 </body>
 
