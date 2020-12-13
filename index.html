@@ -4,37 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Возврат результата работы функции</title>
+    <title>Пример до рефакторинга</title>
 </head>
 
 <body>
     <script>
-        // пример функции, которая использует несколько return
-        function calculateArea(side1, side2, side3) {
-            // если нет значения для аргумента side1 или side2 - не выполняем расчетов, возвращаем undefined
-            if (side1 === undefined || side2 === undefined) {
-                return; // прекратить работу функции - возвращается результат undefined
-            }
 
-            // если не указана сторона 3, но есть сторона 1 и 2 - считаем площадь квадрата
-            if (side3 === undefined) {
-                return side1 * side2;
-            }
-            else {
-                // если указано три стороны - считаем площадь треугольника по формуле Герона
-                let p = (side1 + side2 + side3) / 2; // полупериметр треугольника 
-                return Math.sqrt(p * (p - side1) * (p - side2) * (p - side3)); // корень произведений разности полупериметра и каждой стороны
-            }
+        // массив с именами продуктов
+        let names = [];
+        names[0] = "Бумага офисная А4, 80 г/м2, 500 л";
+        names[1] = "Биндеры для бумаги 51 мм";
+        names[2] = "Ручка шариковая синяя";
+
+        // массив с ценами продуктов
+        let prices = [];
+        prices[0] = 280.25;
+        prices[1] = 56;
+        prices[2] = 12.50;
+
+        // массив с количеством покупаемых продуктов
+        let productQuantity = [];
+
+        // цикл для получения количества покупаемых продуктов
+        for (let index = 0; index < names.length; index++) {
+            const name = names[index];
+            const price = prices[index];
+
+            productQuantity[index] = +prompt(`Укажите количество продуктов '${name}', цена ${price}`, 0);
         }
 
-        let result = calculateArea(10, 10);
-        console.log("Площадь квадрата " + result);
+        // цикл для расчета общей цены купленных продуктов
+        let totalPrice = 0;
+        for (let index = 0; index < productQuantity.length; index++) {
+            totalPrice += prices[index] * productQuantity[index];
+        }
 
-        result = calculateArea(10, 10, 15);
-        console.log("Площадь треугольника " + result);
+        alert(`Сумма Вашего заказа ${totalPrice}.`);
 
-        result = calculateArea(10);
-        console.log("Площадь фигуры " + result);
+        let isFreeShipping = totalPrice > 1000;
+        if (isFreeShipping) // иногда в условии используется только одна переменная
+        {
+            alert("Доставка будет бесплатной.");
+        }
     </script>
 </body>
 
