@@ -4,24 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Возврат результата работы функции</title>
+    <title>Document</title>
 </head>
 
 <body>
     <script>
-        // В функциях можно использовать ключевое слово return для того, чтобы вернуть значение в часть кода, которая вызывала функцю
-        // Инструкция return прекращает выполнение функции - любые оставшиеся инструкции в функции не выполнятся.
-        function sum(x, y) {
-            let sumResult = x + y;
-            return sumResult;
+        let firstName;
+        let lastName;
+        let age;
 
-            // return x + y; // После return может следовать выражение. Результат выполнения выражения будет возвращаемым значением. 
-
-            console.log("Код после return не выполняется."); // эта инструкция не сработает, так как return завершает работу функции
+        function ask() {
+            firstName = prompt("Введите свое имя:");
+            lastName = prompt("Введите свою фамилию:");
+            age = prompt("Введите свой возраст:");
         }
 
-        let result = sum(10, 20); // функция возвращает значение, которое будет записано в переменную result
-        console.log(result);
+        function say() {
+            console.log("Имя: " + firstName);
+            console.log("Фамилия: " + lastName);
+            console.log("Возраст: " + age);
+        }
+
+        let needRepeat;
+        do {
+            ask();
+            say();
+            needRepeat = confirm("Пройти заполнение еще раз?");
+        } while (needRepeat);
     </script>
 </body>
 
