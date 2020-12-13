@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пример до рефакторинга</title>
+    <title>Пример после рефакторинга</title>
 </head>
 
 <body>
     <script>
-
         // массив с именами продуктов
         let names = [];
         names[0] = "Бумага офисная А4, 80 г/м2, 500 л";
@@ -22,29 +21,37 @@
         prices[1] = 56;
         prices[2] = 12.50;
 
-        // массив с количеством покупаемых продуктов
-        let productQuantity = [];
+        let orderedProducts = promptOrderedProducts();
+        let totalPrice = calculateTotalPrice(orderedProducts);
+        showOrderDetails(totalPrice);
 
-        // цикл для получения количества покупаемых продуктов
-        for (let index = 0; index < names.length; index++) {
-            const name = names[index];
-            const price = prices[index];
+        function promptOrderedProducts() {
+            let products = [];
+            for (let index = 0; index < names.length; index++) {
+                const name = names[index];
+                const price = prices[index];
 
-            productQuantity[index] = +prompt(`Укажите количество продуктов '${name}', цена ${price}`, 0);
+                products[index] = +prompt(`Укажите количество продуктов '${name}', цена ${price}`, 0);
+            }
+
+            return products;
         }
 
-        // цикл для расчета общей цены купленных продуктов
-        let totalPrice = 0;
-        for (let index = 0; index < productQuantity.length; index++) {
-            totalPrice += prices[index] * productQuantity[index];
+        function calculateTotalPrice(products) {
+            let sum = 0;
+            for (let index = 0; index < products.length; index++) {
+                sum += prices[index] * products[index];
+            }
+            return sum;
         }
 
-        alert(`Сумма Вашего заказа ${totalPrice}.`);
+        function showOrderDetails(orderTotalPrice) {
+            alert(`Сумма Вашего заказа ${orderTotalPrice}.`);
 
-        let isFreeShipping = totalPrice > 1000;
-        if (isFreeShipping) // иногда в условии используется только одна переменная
-        {
-            alert("Доставка будет бесплатной.");
+            let isFreeShipping = orderTotalPrice > 1000;
+            if (isFreeShipping) {
+                alert("Доставка будет бесплатной.");
+            }
         }
     </script>
 </body>
