@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parameters</title>
+    <title>Undefined parameter</title>
 </head>
 
 <body>
     <script>
-        // Определение функции с двумя параметрами (аргументами) - text и repeatCount 
+        // Если при вызове функции значения для параметра не передавалось, значение параметра будет равно undefined
         function showMessage(text, repeatCount) {
+            if (repeatCount === undefined) {
+                repeatCount = 1;
+            }
+
             for (let i = 0; i < repeatCount; i++) {
                 console.log(text);
             }
         }
 
-        // При вызове функции showMessage, мы можем первым значением инициализировать параметр с именем text,
-        // а вторым значением - repeatCount
-        showMessage("Hello world", 1);
+        showMessage("Hello world"); // нет второго значения при вызове, параметр repeatCount = undefined
         showMessage("Привет мир", 2);
+        showMessage("ABC"); // нет второго значения при вызове, параметр repeatCount = undefined
     </script>
 </body>
 
