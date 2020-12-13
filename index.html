@@ -4,25 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Undefined parameter</title>
+    <title>Default parameter</title>
 </head>
 
 <body>
     <script>
-        // Если при вызове функции значения для параметра не передавалось, значение параметра будет равно undefined
-        function showMessage(text, repeatCount) {
-            if (repeatCount === undefined) {
-                repeatCount = 1;
-            }
-
+        // Если значение для параметра repeatCount не будет предоставлено при вызове, будет использоваться значение по умолчанию - 1
+        function showMessage(text, repeatCount = 1) {
             for (let i = 0; i < repeatCount; i++) {
                 console.log(text);
             }
         }
 
-        showMessage("Hello world"); // нет второго значения при вызове, параметр repeatCount = undefined
+        showMessage("Hello world"); // так как нет второго значения при вызове - используется значение по умолчанию для параметра repeatCount 
         showMessage("Привет мир", 2);
-        showMessage("ABC"); // нет второго значения при вызове, параметр repeatCount = undefined
+        showMessage("ABC");
     </script>
 </body>
 
