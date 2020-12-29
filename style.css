@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+}
+.container {
+    background-image: url(img/DSC_0054.JPG);
+    width: 100%;
+    height: auto;
+}
