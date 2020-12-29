@@ -1,8 +1,42 @@
 * {
     margin: 0;
 }
-.container {
+
+body {
     background-image: url(img/DSC_0054.JPG);
     width: 100%;
     height: auto;
+    background-attachment: fixed;
+}
+
+.container__header h1 {
+    font-size: 150px;
+    font-family: 'Courgette', cursive;
+    text-align: center;
+    color: rgb(59, 83, 45);
+    text-shadow: 2px 2px 5px rgb(79, 114, 58);
+}
+
+.container__main {
+    border: 2px solid white;
+    width: 70%;
+    position: relative;
+    left: 30%;
+    top: 30px;
+}
+
+.container__main h2 {
+    color:rgb(242, 240, 230);
+    font-family: 'Courgette', cursive;
+    font-size: 36px;
+    text-align: right;
+
+}
+
+.container__main p {
+    color:rgb(242, 240, 230);
+    font-size: 22px;
+    font-family: 'Courgette', cursive;
+    font-weight: bold;
+    word-wrap: break-word;
 }
