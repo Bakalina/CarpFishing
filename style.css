@@ -10,11 +10,14 @@ body {
 }
 
 .container__header h1 {
+    width: max-content;
     font-size: 150px;
     font-family: 'Courgette', cursive;
-    text-align: center;
     color: rgb(59, 83, 45);
     text-shadow: 2px 2px 5px rgb(79, 114, 58);
+    position: relative;
+    left: 300px;
+    top: 20px;
 }
 
 .container__main {
@@ -27,7 +30,7 @@ body {
 .container__main h2 {
     color: rgb(242, 240, 230);
     font-family: 'Courgette', cursive;
-    font-size: 36px;
+    font-size: 50px;
     text-align: right;
 
 }
@@ -36,7 +39,6 @@ body {
     color: rgb(242, 240, 230);
     font-size: 22px;
     font-family: 'Courgette', cursive;
-    font-weight: bold;
     text-align: justify;
     text-indent: 20px;
 }
