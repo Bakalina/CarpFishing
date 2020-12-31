@@ -15,10 +15,9 @@ body {
     font-family: 'Courgette', cursive;
     color: rgb(59, 83, 45);
     text-shadow: 2px 2px 5px rgb(79, 114, 58);
-    position: relative;
+    position: fixed;
     left: 300px;
     top: 20px;
-    position: fixed;
 }
 
 .container__main {
@@ -29,7 +28,7 @@ body {
 }
 
 .container__main h2 {
-    color: rgb(242, 240, 230);
+    color: black;
     font-family: 'Courgette', cursive;
     font-size: 50px;
     text-align: right;
@@ -37,7 +36,7 @@ body {
 }
 
 .container__main p {
-    color: rgb(242, 240, 230);
+    color: black;
     font-size: 22px;
     font-family: 'Courgette', cursive;
     text-align: justify;
