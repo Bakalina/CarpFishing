@@ -13,33 +13,81 @@ body {
     width: max-content;
     font-size: 150px;
     font-family: 'Courgette', cursive;
-    color: rgb(59, 83, 45);
+    color: rgba(0, 0, 0, 0.39);
     text-shadow: 2px 2px 5px rgb(79, 114, 58);
     position: fixed;
     left: 300px;
     top: 20px;
 }
 
-.container__main {
+.main__article-one {
     width: 65%;
     position: relative;
     left: 30%;
     top: 200px;
+    text-shadow: 0px 0px 10px black;
+    font-family: 'Courgette', cursive;
+    color: white;
 }
 
-.container__main h2 {
-    color: black;
-    font-family: 'Courgette', cursive;
+.main__article-one h2 {
     font-size: 50px;
     text-align: right;
 
 }
 
-.container__main p {
-    color: black;
+.main__article-one p {
     font-size: 22px;
-    font-family: 'Courgette', cursive;
     text-align: justify;
     text-indent: 20px;
-    background: rgba(0, 0, 0, 0.15);
+}
+
+.main__article-one cite {
+    font-size: 24px;
+}
+
+.main__article-two {
+    width: 30%;
+    position: fixed;
+    top: 200px;
+    
+    border: 2px solid black;
+}
+.main__article-two h2 {
+    text-align: center;
+    color: white;
+    font-family: 'Courgette', cursive;
+    text-shadow: 0px 0px 10px black;
+}
+
+.main__article-two img {
+    width: 230px;
+    height: auto;
+}
+.article__img-one {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    transform: rotate(340deg);
+}
+
+.article__img-two {
+    position: absolute;
+    top: 60px;
+    left: 280px;
+    transform: rotate(15deg);
+}
+
+.article__img-three {
+    position: absolute;
+    top: 350px;
+    left: 50px;
+    transform: rotate(5deg);
+}
+
+.article__img-four {
+    position: absolute;
+    top: 360px;
+    left: 260px;
+    transform: rotate(350deg);
 }
