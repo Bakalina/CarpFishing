@@ -13,7 +13,7 @@ body {
     width: max-content;
     font-size: 150px;
     font-family: 'Courgette', cursive;
-    color: rgba(0, 0, 0, 0.39);
+    color: rgb(163, 170, 64);
     text-shadow: 2px 2px 5px rgb(79, 114, 58);
     position: fixed;
     left: 300px;
@@ -28,6 +28,7 @@ body {
     text-shadow: 0px 0px 10px black;
     font-family: 'Courgette', cursive;
     color: white;
+    z-index: 10;
 }
 
 .main__article-one h2 {
@@ -50,25 +51,30 @@ body {
     width: 30%;
     position: fixed;
     top: 200px;
-    
-    border: 2px solid black;
 }
+
 .main__article-two h2 {
     text-align: center;
-    color: white;
+    color: rgb(173, 196, 164);
     font-family: 'Courgette', cursive;
     text-shadow: 0px 0px 10px black;
+    position: absolute;
+    left: 300px;
+    top: 670px;
+    z-index: 5;
 }
 
 .main__article-two img {
     width: 230px;
     height: auto;
 }
+
 .article__img-one {
     position: absolute;
     top: 70px;
     left: 50px;
-    transform: rotate(340deg);
+    transform: rotate(350deg);
+    z-index: 4;
 }
 
 .article__img-two {
@@ -76,6 +82,7 @@ body {
     top: 60px;
     left: 280px;
     transform: rotate(15deg);
+    z-index: 1;
 }
 
 .article__img-three {
@@ -83,6 +90,7 @@ body {
     top: 350px;
     left: 50px;
     transform: rotate(5deg);
+    z-index: 2;
 }
 
 .article__img-four {
@@ -90,4 +98,5 @@ body {
     top: 360px;
     left: 260px;
     transform: rotate(350deg);
+    z-index: 3;
 }
