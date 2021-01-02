@@ -53,7 +53,7 @@ body {
     top: 200px;
 }
 
-.main__article-two h2 {
+.main__article-two a {
     text-align: center;
     color: rgb(173, 196, 164);
     font-family: 'Courgette', cursive;
@@ -62,6 +62,7 @@ body {
     left: 300px;
     top: 670px;
     z-index: 5;
+    text-decoration: none;
 }
 
 .main__article-two img {
