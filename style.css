@@ -20,7 +20,7 @@ body {
     -webkit-text-stroke: 1px #8cc63e;
 }
 
-.main__article-one {
+.main__article {
     width: 68%;
     height: 800px;
     min-width: 700px;
@@ -34,29 +34,29 @@ body {
     background: rgba(32, 56, 29, 0.158);
 }
 
-.main__article-one h2 {
+.main__article h2 {
     font-size: 50px;
     text-align: right;
 
 }
 
-.main__article-one p {
+.main__article p {
     font-size: 22px;
     text-align: justify;
     text-indent: 20px;
 }
 
-.main__article-one cite {
+.main__article cite {
     font-size: 24px;
 }
 
-.main__article-two {
+.main__img {
     width: 30%;
     position: absolute;
     top: 200px;
 }
 
-.main__article-two a {
+.main__img a {
     text-align: center;
     color: #8cc63e;
     font-family: 'Courgette', cursive;
@@ -68,12 +68,12 @@ body {
     text-decoration: none;
 }
 
-.main__article-two img {
+.main__img img {
     width: 230px;
     height: auto;
 }
 
-.article__img-one {
+.img-one {
     position: absolute;
     top: 70px;
     left: 50px;
@@ -81,7 +81,7 @@ body {
     z-index: 4;
 }
 
-.article__img-two {
+.img-two {
     position: absolute;
     top: 60px;
     left: 280px;
@@ -89,7 +89,7 @@ body {
     z-index: 1;
 }
 
-.article__img-three {
+.img-three {
     position: absolute;
     top: 350px;
     left: 50px;
@@ -97,7 +97,7 @@ body {
     z-index: 2;
 }
 
-.article__img-four {
+.img-four {
     position: absolute;
     top: 360px;
     left: 260px;
