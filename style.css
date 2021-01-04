@@ -31,7 +31,8 @@ body {
     font-family: 'Courgette', cursive;
     color: white;
     z-index: 10;
-    background: rgba(32, 56, 29, 0.158);
+    background: rgba(32, 56, 29, 0.5);
+    padding: 10px;
 }
 
 .main__article h2 {
